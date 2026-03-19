@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  overflow-x: hidden;
+}
+
+/* SIDEBAR GRID */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* LEFT SIDE */
+.sidebar-left {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* RIGHT SIDE */
+.sidebar-right {
+  background: #15161a;
+  padding-top: 40px;
+}
+
+.sidebar-right ul {
+  list-style: none;
+  text-align: Left;
+  padding-left: 10px;
+}
+
+.sidebar-right li {
+  margin: 15px 0;
+}
+
+.sidebar-right a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar-right a:hover {
+  color: white;
+}
+
+.sidebar-right a.active {
+  color: #a9b3f0;
+  font-weight: bold;
+}
+
+/* CONTENT */
+.content {
+  margin-left: 260px;
+  width: 100%;
+}
+
+/* SECTIONS */
+.scene {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* BACKGROUNDS */
+#scene1 { background: radial-gradient(circle at center, #c96697, #790909); }
+#scene2 { background: linear-gradient(#42275a, #734b6d); }
+#scene3 { background: linear-gradient(#000000, #434343); }
+#scene4 { background: linear-gradient(#11998e, #38ef7d); }
+#scene5 { background: linear-gradient(#fc466b, #3f5efb); }
+#scene6 { background: linear-gradient(#f7971e, #ffd200); }
+#scene7 { background: linear-gradient(#003cff, #03418d); }
+
+/* HERO TEXT */
+.hero-title {
+  font-size: 8vw;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+  transition: all 1s ease;
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.5),
+    0 0 20px rgba(255,255,255,0.3),
+    0 0 40px rgba(0,255,255,0.3);
+}
+
+.first.show .hero-title {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* NORMAL SECTION TEXT ANIMATION */
+.scene h1 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.6s ease;
+}
+
+.scene.show h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
