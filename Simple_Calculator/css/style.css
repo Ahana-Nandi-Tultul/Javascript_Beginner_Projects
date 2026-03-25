@@ -1,49 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #121212;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
   font-family: Arial, sans-serif;
 }
 
+/* Calculator Box */
 .calculator {
   background: #1f1f2e;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
+/* Display */
 #display {
   width: 100%;
-  height: 60px;
-  font-size: 24px;
-  margin-bottom: 10px;
+  height: 70px;
+  font-size: 26px;
+  margin-bottom: 15px;
   text-align: right;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  outline: none;
 }
 
+/* Buttons Grid */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 70px);
+  grid-auto-rows: 65px; /* 🔥 important for span */
   gap: 10px;
+  padding-left: 10px;
 }
 
+/* Buttons */
 button {
-  height: 60px;
   font-size: 18px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background: #2e2e44;
   color: white;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+/* Hover */
 button:hover {
   background: #444466;
+  transform: scale(1.05);
 }
 
+/* Click Effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Zero button (2 columns) */
 .zero {
   grid-column: span 2;
+}
+
+
+/* Special buttons */
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3) {
+  background: #ff3b30;
+}
+
+button:nth-child(1):hover,
+button:nth-child(2):hover,
+button:nth-child(3):hover {
+  background: #d93228;
+}
+
+/* Operator buttons */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+  background: #34c759;
+}
+
+button:nth-child(4):hover,
+button:nth-child(8):hover,
+button:nth-child(12):hover,
+button:nth-child(16):hover {
+  background: #28a745;
 }
