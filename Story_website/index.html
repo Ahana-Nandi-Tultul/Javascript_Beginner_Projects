@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Interactive Story</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Website</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <nav class="sidebar">
-    <div class="sidebar-left">
-      Beginning
+    <nav class="sidebar">
+        <div class="sidebar-left">
+            Beginning
+        </div>
+        <div class="sidebar-right">
+            <ul>
+                <li><a href="#scene1">Beginning</a></li>
+                <li><a href="#scene2">Discovery</a></li>
+                <li><a href="#scene3">Struggle</a></li>
+                <li><a href="#scene4">Learning</a></li>
+                <li><a href="#scene5">Growth</a></li>
+                <li><a href="#scene6">Success</a></li>
+                <li><a href="#scene7">Future</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <section id="scene1" class="scene first">
+            <h1 class="hero-title">Beginning</h1>
+        </section>
+        <section id="scene2" class="scene">
+            <h1>Discovery</h1>
+        </section>
+        <section id="scene3" class="scene">
+            <h1>Struggle</h1>
+        </section>
+        <section id="scene4" class="scene">
+            <h1>Learning</h1>
+        </section>
+        <section id="scene5" class="scene">
+            <h1>Growth</h1>
+        </section>
+        <section id="scene6" class="scene">
+            <h1>Success</h1>
+        </section>
+        <section id="scene7" class="scene">
+            <h1>Future</h1>
+        </section>
     </div>
-    <div class="sidebar-right">
-      <ul>
-        <li><a href="#scene1">Beginning</a></li>
-        <li><a href="#scene2">Discovery</a></li>
-        <li><a href="#scene3">Struggle</a></li>
-        <li><a href="#scene4">Learning</a></li>
-        <li><a href="#scene5">Growth</a></li>
-        <li><a href="#scene6">Success</a></li>
-        <li><a href="#scene7">Future</a></li>
-      </ul>
-    </div>
-
-  </nav>
-  <div class="content">
-    <section id="scene1" class="scene first">
-      <h1 class="hero-title">Beginning</h1>
-    </section>
-
-    <section id="scene2" class="scene"><h1>Discovery</h1></section>
-    <section id="scene3" class="scene"><h1>Struggle</h1></section>
-    <section id="scene4" class="scene"><h1>Learning</h1></section>
-    <section id="scene5" class="scene"><h1>Growth</h1></section>
-    <section id="scene6" class="scene"><h1>Success</h1></section>
-    <section id="scene7" class="scene"><h1>Future</h1></section>
-
-  </div>
-
-  <script src="./js/script.js"></script>
+    <script src ="./js/script.js"></script>
 </body>
 </html>
