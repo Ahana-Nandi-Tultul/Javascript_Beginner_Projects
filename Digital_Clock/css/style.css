@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #001F3F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Outer circular clock */
+.clock {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+    0 0 30px rgba(0,0,0,0.6),
+    inset 0 0 20px rgba(255,255,255,0.05);
+  border: 8px solid #00ffcc;
+}
+
+/* Inner content */
+.inner-clock {
+  text-align: center;
+}
+
+/* Time text */
+#time {
+  color: #00ffcc;
+  font-size: 32px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+
+/* Dropdown */
+select {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+}
