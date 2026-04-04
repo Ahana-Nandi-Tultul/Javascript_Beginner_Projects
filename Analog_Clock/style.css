@@ -4,13 +4,30 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: linear-gradient(135deg, #2c3e50, #4ca1af);
+  --clock-bg: #111;
+  --border: #fff;
+  --text: #fff;
+  --tick: #bbb;
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  --clock-bg: #ffffff;
+  --border: #333;
+  --text: #000;
+  --tick: #555;
+}
+
 /* SAME BACKGROUND */
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  background: var(--bg);
 }
 
 /* RESPONSIVE CLOCK */
@@ -19,10 +36,11 @@ body {
   height: 85vmin;
   max-width: 500px;
   max-height: 500px;
-  border: 1.5vmin solid #fff;
+  border: 1.5vmin solid ;
   border-radius: 50%;
   position: relative;
-  background: #111;
+    background: var(--clock-bg);
+  border-color: var(--border);
   box-shadow: 0 0 5vmin rgba(0,0,0,0.6);
 }
 
@@ -30,7 +48,7 @@ body {
 .center {
   width: 2vmin;
   height: 2vmin;
-  background: #fff;
+ background: var(--border);
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -68,10 +86,10 @@ body {
 /* NUMBERS */
 .number {
   position: absolute;
-  color: white;
   font-size: 5vmin;
   font-weight: bold;
   transform: translate(-50%, -50%);
+  color: var(--text);
 }
 
 /* TICKS */
@@ -79,7 +97,7 @@ body {
   position: absolute;
   width: 0.4vmin;
   height: 2vmin;
-  background: #bbb;
+   background: var(--tick);
 
   top: 50%;
   left: 50%;
@@ -91,4 +109,17 @@ body {
   height: 3.5vmin;
   width: 0.6vmin;
   background: #fff;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }

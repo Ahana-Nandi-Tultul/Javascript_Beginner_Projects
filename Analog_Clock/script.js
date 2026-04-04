@@ -3,6 +3,19 @@ const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const second = document.getElementById("second");
 
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+
+  // Change icon
+  if (document.body.classList.contains("light")) {
+    toggleBtn.innerText = "☀️";
+  } else {
+    toggleBtn.innerText = "🌙";
+  }
+});
+
 function createClock() {
   const size = clock.offsetWidth;
   const center = size / 2;
